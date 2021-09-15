@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ProvaCandidato.Data.Entidade.Cidade>
+
+@{
+    ViewBag.Title = "Cidades";
+    ViewBag.DadosEmpresa = System.Configuration.ConfigurationSettings.AppSettings["NomeEmpresa"];
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#tbCidades").DataTable();
+    });
+</script>
+<h2>Cidades</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar", "Create", "", htmlAttributes: new { @class = "btn btn-success" })
+</p>
+<table class="table" id="tbCidades">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Codigo }, new { @class = "btn btn-warning" })
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.Codigo }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.Codigo }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+
+
+</table>
