@@ -25,7 +25,6 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,18 +47,6 @@
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.Commands, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.Commands.7.0.0-rc1-final\lib\net451\EntityFramework.Commands.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.Core, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.Core.7.0.0-rc1-final\lib\net451\EntityFramework.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.Relational, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.Relational.7.0.0-rc1-final\lib\net451\EntityFramework.Relational.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.Relational.Design, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.Relational.Design.7.0.0-rc1-final\lib\net451\EntityFramework.Relational.Design.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
@@ -98,61 +85,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Caching.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Configuration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Configuration.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Configuration.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.DependencyInjection.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Logging.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.OptionsModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.OptionsModel.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.OptionsModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Primitives.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="Remotion.Linq, Version=2.0.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Remotion.Linq.2.0.1\lib\net45\Remotion.Linq.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Collections.Concurrent" />
-    <Reference Include="System.Collections.Immutable, Version=1.1.36.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Collections.Immutable.1.1.36\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.0.0-beta-23516\lib\dotnet5.2\System.Diagnostics.DiagnosticSource.dll</HintPath>
-    </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Interactive.Async, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ix-Async.1.2.5\lib\net45\System.Interactive.Async.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -230,8 +169,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CidadesController.cs" />
-    <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -323,115 +260,8 @@
     <Content Include="Assets\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Assets\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Assets\themes\base\minified\jquery.ui.tooltip.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\buttons.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\buttons.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\buttons.bootstrap4.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\buttons.bootstrap4.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\buttons.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\buttons.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\buttons.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\buttons.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\buttons.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\buttons.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.bootstrap4.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.bootstrap4.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.material.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.material.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.semanticui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.semanticui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.uikit.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.uikit.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\jquery.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\jquery.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\jquery.dataTables_themeroller.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\responsive.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\responsive.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\responsive.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\responsive.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\responsive.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\responsive.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\responsive.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\responsive.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\scroller.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\scroller.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\scroller.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\scroller.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\scroller.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\scroller.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\scroller.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\scroller.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\select.bootstrap.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\select.bootstrap.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\select.dataTables.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\select.dataTables.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\select.foundation.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\select.foundation.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\select.jqueryui.css" />
-    <Content Include="Assets\StyleSheets\DataTables\css\select.jqueryui.min.css" />
-    <Content Include="Assets\StyleSheets\DataTables\images\details_close.png" />
-    <Content Include="Assets\StyleSheets\DataTables\images\details_open.png" />
-    <Content Include="Assets\StyleSheets\DataTables\images\sort_asc.png" />
-    <Content Include="Assets\StyleSheets\DataTables\images\sort_asc_disabled.png" />
-    <Content Include="Assets\StyleSheets\DataTables\images\sort_both.png" />
-    <Content Include="Assets\StyleSheets\DataTables\images\sort_desc.png" />
-    <Content Include="Assets\StyleSheets\DataTables\images\sort_desc_disabled.png" />
-    <Content Include="Assets\StyleSheets\DataTables\swf\flashExport.swf" />
     <Content Include="favicon.ico" />
-    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -439,70 +269,6 @@
     <Content Include="Assets\Scripts\_references.js" />
     <Content Include="Assets\Scripts\jquery-ui-1.10.2.js" />
     <Content Include="Assets\Scripts\jquery-ui-1.10.2.min.js" />
-    <Content Include="Assets\Scripts\DataTables\autoFill.bootstrap.js" />
-    <Content Include="Assets\Scripts\DataTables\autoFill.bootstrap.min.js" />
-    <Content Include="Assets\Scripts\DataTables\autoFill.foundation.js" />
-    <Content Include="Assets\Scripts\DataTables\autoFill.foundation.min.js" />
-    <Content Include="Assets\Scripts\DataTables\autoFill.jqueryui.js" />
-    <Content Include="Assets\Scripts\DataTables\autoFill.jqueryui.min.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.bootstrap.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.bootstrap.min.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.bootstrap4.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.bootstrap4.min.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.colVis.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.colVis.min.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.flash.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.flash.min.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.foundation.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.foundation.min.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.html5.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.html5.min.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.jqueryui.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.jqueryui.min.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.print.js" />
-    <Content Include="Assets\Scripts\DataTables\buttons.print.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.autoFill.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.autoFill.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.bootstrap.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.bootstrap.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.bootstrap4.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.bootstrap4.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.buttons.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.buttons.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.colReorder.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.colReorder.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.fixedColumns.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.fixedColumns.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.fixedHeader.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.fixedHeader.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.foundation.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.foundation.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.jqueryui.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.jqueryui.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.keyTable.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.keyTable.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.material.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.material.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.responsive.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.responsive.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.rowReorder.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.rowReorder.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.scroller.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.scroller.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.select.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.select.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.semanticui.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.semanticui.min.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.uikit.js" />
-    <Content Include="Assets\Scripts\DataTables\dataTables.uikit.min.js" />
-    <Content Include="Assets\Scripts\DataTables\jquery.dataTables.js" />
-    <Content Include="Assets\Scripts\DataTables\jquery.dataTables.min.js" />
-    <Content Include="Assets\Scripts\DataTables\responsive.bootstrap.js" />
-    <Content Include="Assets\Scripts\DataTables\responsive.bootstrap.min.js" />
-    <Content Include="Assets\Scripts\DataTables\responsive.foundation.js" />
-    <Content Include="Assets\Scripts\DataTables\responsive.foundation.min.js" />
-    <Content Include="Assets\Scripts\DataTables\responsive.jqueryui.js" />
-    <Content Include="Assets\Scripts\DataTables\responsive.jqueryui.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -515,36 +281,18 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Clientes\Create.cshtml" />
-    <Content Include="Views\Clientes\Delete.cshtml" />
-    <Content Include="Views\Clientes\Details.cshtml" />
-    <Content Include="Views\Clientes\Edit.cshtml" />
-    <Content Include="Views\Clientes\Index.cshtml" />
-    <Content Include="Views\Cidades\Index.cshtml" />
-    <Content Include="Views\Cidades\Details.cshtml" />
-    <Content Include="Views\Cidades\Create.cshtml" />
-    <Content Include="Views\Cidades\Edit.cshtml" />
-    <Content Include="Views\Cidades\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <Content Include="Assets\Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Assets\StyleSheets\DataTables\css\mixins.scss" />
-    <Content Include="Assets\StyleSheets\DataTables\css\common.scss" />
     <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ProvaCandidato.Data\ProvaCandidato.Data.csproj">
-      <Project>{8d1e713b-813c-4c75-9c8b-5778dacd2ce0}</Project>
-      <Name>ProvaCandidato.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
