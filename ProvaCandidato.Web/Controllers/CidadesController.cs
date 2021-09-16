@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ProvaCandidato.Data;
 using ProvaCandidato.Data.Entidade;
+using ProvaCandidato.Helper;
 
 namespace ProvaCandidato.Controllers
 {
@@ -53,6 +54,7 @@ namespace ProvaCandidato.Controllers
             {
                 db.Cidades.Add(cidade);
                 db.SaveChanges();
+                MessageHelper.DisplaySuccessMessage(this, "Cidade cadastrada com sucesso.");
                 return RedirectToAction("Index");
             }
 
@@ -85,6 +87,7 @@ namespace ProvaCandidato.Controllers
             {
                 db.Entry(cidade).State = EntityState.Modified;
                 db.SaveChanges();
+                MessageHelper.DisplaySuccessMessage(this, $"Cidade {cidade.Nome} alterada com sucesso.");
                 return RedirectToAction("Index");
             }
             return View(cidade);
@@ -113,6 +116,7 @@ namespace ProvaCandidato.Controllers
             Cidade cidade = db.Cidades.Find(id);
             db.Cidades.Remove(cidade);
             db.SaveChanges();
+            MessageHelper.DisplaySuccessMessage(this, $"Cidade foi excluida com sucesso.");
             return RedirectToAction("Index");
         }
 

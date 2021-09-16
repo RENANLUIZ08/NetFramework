@@ -117,6 +117,7 @@
     <Compile Include="ContextoPrincipal.cs" />
     <Compile Include="Entidade\Cidade.cs" />
     <Compile Include="Entidade\Cliente.cs" />
+    <Compile Include="Entidade\ClienteObservacao.cs" />
     <Compile Include="Migrations\202109132157347_initialDb.cs" />
     <Compile Include="Migrations\202109132157347_initialDb.Designer.cs">
       <DependentUpon>202109132157347_initialDb.cs</DependentUpon>

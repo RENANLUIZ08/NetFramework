@@ -41,6 +41,7 @@ namespace ProvaCandidato.Controllers
         // GET: Clientes/Create
         public ActionResult Create()
         {
+            ViewBag.obs = new List<ClienteObservacao>();
             ViewBag.CidadeId = new SelectList(db.Cidades, "Codigo", "Nome");
             return View();
         }
@@ -52,10 +53,17 @@ namespace ProvaCandidato.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Codigo,Nome,DataNascimento,CidadeId,Ativo")] Cliente cliente)
         {
+            var listObs = Request.Form["listObs"];
+            if(string.IsNullOrEmpty(listObs))
+            {
+                string[] lObs = listObs.Split(',');
+            }
+
             if (ModelState.IsValid)
             {
                 db.Clientes.Add(cliente);
                 db.SaveChanges();
+                MessageHelper.DisplaySuccessMessage(this, "Cliente cadastrado com sucesso.");
                 return RedirectToAction("Index");
             }
 
@@ -90,6 +98,7 @@ namespace ProvaCandidato.Controllers
             {
                 db.Entry(cliente).State = EntityState.Modified;
                 db.SaveChanges();
+                MessageHelper.DisplaySuccessMessage(this, $"Cliente {cliente.Nome} foi alterado com sucesso.");
                 return RedirectToAction("Index");
             }
             ViewBag.CidadeId = new SelectList(db.Cidades, "Codigo", "Nome", cliente.CidadeId);
@@ -119,6 +128,7 @@ namespace ProvaCandidato.Controllers
             Cliente cliente = db.Clientes.Find(id);
             db.Clientes.Remove(cliente);
             db.SaveChanges();
+            MessageHelper.DisplaySuccessMessage(this, $"Cidade foi excluida com sucesso.");
             return RedirectToAction("Index");
         }
 
