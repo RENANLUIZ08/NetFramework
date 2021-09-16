@@ -53,6 +53,10 @@
     <Compile Include="Entidade\Cidade.cs" />
     <Compile Include="Entidade\Cliente.cs" />
     <Compile Include="Entidade\ClienteObservacao.cs" />
+    <Compile Include="Migrations\202109132157347_initialDb.cs" />
+    <Compile Include="Migrations\202109132157347_initialDb.Designer.cs">
+      <DependentUpon>202109132157347_initialDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202109161028427_tbObservacaoCLiente.cs" />
     <Compile Include="Migrations\202109161028427_tbObservacaoCLiente.Designer.cs">
       <DependentUpon>202109161028427_tbObservacaoCLiente.cs</DependentUpon>
@@ -68,6 +72,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\202109132157347_initialDb.resx">
+      <DependentUpon>202109132157347_initialDb.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109161028427_tbObservacaoCLiente.resx">
       <DependentUpon>202109161028427_tbObservacaoCLiente.cs</DependentUpon>
     </EmbeddedResource>

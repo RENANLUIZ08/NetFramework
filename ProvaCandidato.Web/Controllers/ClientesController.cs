@@ -53,10 +53,19 @@ namespace ProvaCandidato.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Codigo,Nome,DataNascimento,CidadeId,Ativo")] Cliente cliente)
         {
-            var listObs = Request.Form["listObs"];
-            if(string.IsNullOrEmpty(listObs))
+            var listObs = Request.Form["lsObs"];
+            if(!string.IsNullOrEmpty(listObs))
             {
                 string[] lObs = listObs.Split(',');
+                List<ClienteObservacao> clienteObservacaos = new List<ClienteObservacao>();
+                lObs.ToList().ForEach(t =>
+                {
+                    clienteObservacaos.Add(new ClienteObservacao()
+                    {
+                        Observacao = t
+                    });
+                });
+                cliente.Observacoes = clienteObservacaos;
             }
 
             if (ModelState.IsValid)
@@ -78,12 +87,13 @@ namespace ProvaCandidato.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Cliente cliente = db.Clientes.Find(id);
+            Cliente cliente = db.Clientes.Include(c => c.Observacoes).Where(c => c.Codigo == id)?.FirstOrDefault();
             if (cliente == null)
             {
                 return HttpNotFound();
             }
             ViewBag.CidadeId = new SelectList(db.Cidades, "Codigo", "Nome", cliente.CidadeId);
+            ViewBag.Observacoes = cliente.Observacoes.Select(c => c.Observacao);
             return View(cliente);
         }
 

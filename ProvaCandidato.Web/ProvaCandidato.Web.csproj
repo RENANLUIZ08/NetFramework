@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -169,6 +170,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CidadesController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -177,13 +180,81 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Assets\Images\ExemploPartialView.jpg" />
     <Content Include="Assets\Images\logo.gif" />
     <Content Include="Assets\Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Assets\Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Assets\Scripts\bootstrap.js" />
     <Content Include="Assets\Scripts\bootstrap.min.js" />
+    <Content Include="Assets\Scripts\DataTables\autoFill.bootstrap.js" />
+    <Content Include="Assets\Scripts\DataTables\autoFill.bootstrap.min.js" />
+    <Content Include="Assets\Scripts\DataTables\autoFill.foundation.js" />
+    <Content Include="Assets\Scripts\DataTables\autoFill.foundation.min.js" />
+    <Content Include="Assets\Scripts\DataTables\autoFill.jqueryui.js" />
+    <Content Include="Assets\Scripts\DataTables\autoFill.jqueryui.min.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.bootstrap.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.bootstrap.min.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.bootstrap4.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.bootstrap4.min.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.colVis.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.colVis.min.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.flash.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.flash.min.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.foundation.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.foundation.min.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.html5.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.html5.min.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.jqueryui.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.jqueryui.min.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.print.js" />
+    <Content Include="Assets\Scripts\DataTables\buttons.print.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.autoFill.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.autoFill.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.bootstrap.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.bootstrap.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.bootstrap4.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.bootstrap4.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.buttons.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.buttons.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.colReorder.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.colReorder.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.fixedColumns.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.fixedColumns.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.fixedHeader.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.fixedHeader.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.foundation.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.foundation.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.jqueryui.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.jqueryui.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.keyTable.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.keyTable.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.material.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.material.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.responsive.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.responsive.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.rowReorder.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.rowReorder.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.scroller.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.scroller.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.select.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.select.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.semanticui.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.semanticui.min.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.uikit.js" />
+    <Content Include="Assets\Scripts\DataTables\dataTables.uikit.min.js" />
+    <Content Include="Assets\Scripts\DataTables\jquery.dataTables.js" />
+    <Content Include="Assets\Scripts\DataTables\jquery.dataTables.min.js" />
+    <Content Include="Assets\Scripts\DataTables\responsive.bootstrap.js" />
+    <Content Include="Assets\Scripts\DataTables\responsive.bootstrap.min.js" />
+    <Content Include="Assets\Scripts\DataTables\responsive.foundation.js" />
+    <Content Include="Assets\Scripts\DataTables\responsive.foundation.min.js" />
+    <Content Include="Assets\Scripts\DataTables\responsive.jqueryui.js" />
+    <Content Include="Assets\Scripts\DataTables\responsive.jqueryui.min.js" />
     <Content Include="Assets\Scripts\geral.js" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Assets\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.min.js" />
@@ -197,6 +268,113 @@
     <Content Include="Assets\Scripts\respond.min.js" />
     <Content Include="Assets\StyleSheets\bootstrap.css" />
     <Content Include="Assets\StyleSheets\bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\autoFill.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\buttons.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\buttons.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\buttons.bootstrap4.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\buttons.bootstrap4.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\buttons.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\buttons.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\buttons.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\buttons.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\buttons.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\buttons.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\colReorder.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.bootstrap4.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.material.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.material.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.semanticui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.semanticui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.uikit.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\dataTables.uikit.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedColumns.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\fixedHeader.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\jquery.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\jquery.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\keyTable.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\responsive.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\responsive.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\responsive.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\responsive.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\responsive.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\responsive.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\responsive.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\responsive.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\rowReorder.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\scroller.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\scroller.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\scroller.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\scroller.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\scroller.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\scroller.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\scroller.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\scroller.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\select.bootstrap.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\select.bootstrap.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\select.dataTables.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\select.dataTables.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\select.foundation.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\select.foundation.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\select.jqueryui.css" />
+    <Content Include="Assets\StyleSheets\DataTables\css\select.jqueryui.min.css" />
+    <Content Include="Assets\StyleSheets\DataTables\images\details_close.png" />
+    <Content Include="Assets\StyleSheets\DataTables\images\details_open.png" />
+    <Content Include="Assets\StyleSheets\DataTables\images\sort_asc.png" />
+    <Content Include="Assets\StyleSheets\DataTables\images\sort_asc_disabled.png" />
+    <Content Include="Assets\StyleSheets\DataTables\images\sort_both.png" />
+    <Content Include="Assets\StyleSheets\DataTables\images\sort_desc.png" />
+    <Content Include="Assets\StyleSheets\DataTables\images\sort_desc_disabled.png" />
+    <Content Include="Assets\StyleSheets\DataTables\swf\flashExport.swf" />
     <Content Include="Assets\StyleSheets\geral.css" />
     <Content Include="Assets\themes\base\images\animated-overlay.gif" />
     <Content Include="Assets\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -281,6 +459,16 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Cidades\Create.cshtml" />
+    <Content Include="Views\Cidades\Delete.cshtml" />
+    <Content Include="Views\Cidades\Details.cshtml" />
+    <Content Include="Views\Cidades\Edit.cshtml" />
+    <Content Include="Views\Cidades\Index.cshtml" />
+    <Content Include="Views\Clientes\Create.cshtml" />
+    <Content Include="Views\Clientes\Delete.cshtml" />
+    <Content Include="Views\Clientes\Details.cshtml" />
+    <Content Include="Views\Clientes\Edit.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -292,7 +480,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <Content Include="Assets\Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Assets\StyleSheets\DataTables\css\common.scss" />
+    <Content Include="Assets\StyleSheets\DataTables\css\mixins.scss" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProvaCandidato.Data\ProvaCandidato.Data.csproj">
+      <Project>{8d1e713b-813c-4c75-9c8b-5778dacd2ce0}</Project>
+      <Name>ProvaCandidato.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
