@@ -54,7 +54,7 @@ namespace ProvaCandidato.Controllers
         public ActionResult Create([Bind(Include = "Codigo,Nome,DataNascimento,CidadeId,Ativo")] Cliente cliente)
         {
             var listObs = Request.Form["lsObs"];
-            if(!string.IsNullOrEmpty(listObs))
+            if (!string.IsNullOrEmpty(listObs))
             {
                 string[] lObs = listObs.Split(',');
                 List<ClienteObservacao> clienteObservacaos = new List<ClienteObservacao>();
@@ -93,7 +93,6 @@ namespace ProvaCandidato.Controllers
                 return HttpNotFound();
             }
             ViewBag.CidadeId = new SelectList(db.Cidades, "Codigo", "Nome", cliente.CidadeId);
-            ViewBag.Observacoes = cliente.Observacoes.Select(c => c.Observacao);
             return View(cliente);
         }
 
@@ -104,13 +103,41 @@ namespace ProvaCandidato.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Codigo,Nome,DataNascimento,CidadeId,Ativo")] Cliente cliente)
         {
-            if (ModelState.IsValid)
+            var listObs = Request.Form["lsObs"];
+            if (!string.IsNullOrEmpty(listObs))
             {
-                db.Entry(cliente).State = EntityState.Modified;
-                db.SaveChanges();
-                MessageHelper.DisplaySuccessMessage(this, $"Cliente {cliente.Nome} foi alterado com sucesso.");
-                return RedirectToAction("Index");
+                var cli = db.Clientes.Include(c => c.Observacoes).Where(c => c.Codigo == cliente.Codigo)?.FirstOrDefault();
+                if (cli == null)
+                { return HttpNotFound(); }
+                else
+                {
+                    string[] lObs = listObs.Split(',');
+                    var obsAtuais = cli.Observacoes;
+                    lObs.ToList().ForEach(c =>
+                    {
+                        if(!obsAtuais.Any(d => d.Observacao == c))
+                        {
+                            cli.Observacoes.Add(new ClienteObservacao()
+                            {
+                                Observacao = c,
+                                IdCliente = cli.Codigo
+                            });
+                        }
+
+                    });
+
+                    if (ModelState.IsValid)
+                    {
+                        db.Entry(cli).State = EntityState.Modified;
+                        db.SaveChanges();
+                        MessageHelper.DisplaySuccessMessage(this, $"Cliente {cli.Nome} foi alterado com sucesso.");
+                        return RedirectToAction("Index");
+                    }
+                }
             }
+
+
+
             ViewBag.CidadeId = new SelectList(db.Cidades, "Codigo", "Nome", cliente.CidadeId);
             return View(cliente);
         }

@@ -34,6 +34,7 @@ namespace ProvaCandidato.Data.Entidade
         [DisplayName("Cidades")]
         public virtual Cidade Cidade { get; set; }
 
+        [DisplayName("Observações")]
         public ICollection<ClienteObservacao> Observacoes { get; set; }
 
     }
